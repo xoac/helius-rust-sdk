@@ -18,8 +18,10 @@ async fn test_parse_transactions_success() {
     let url: String = format!("{}/", server.url());
 
     let mock_response: Vec<EnhancedTransaction> = vec![EnhancedTransaction {
+        #[allow(deprecated)]
         account_data: vec![AccountData {
             account: "".to_string(),
+            native_balance_change: Some(10),
             native_token_balance: Some(Number::from(10)),
             token_balance_changes: None,
         }],
@@ -146,8 +148,10 @@ async fn test_parse_transaction_history_success() {
     let url: String = format!("{}/", server.url());
 
     let mock_response: Vec<EnhancedTransaction> = vec![EnhancedTransaction {
+        #[allow(deprecated)]
         account_data: vec![AccountData {
             account: "".to_string(),
+            native_balance_change: Some(10),
             native_token_balance: Some(Number::from(10)),
             token_balance_changes: None,
         }],
