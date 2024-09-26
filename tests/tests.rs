@@ -5,6 +5,7 @@ mod utils {
 }
 
 mod types {
+    mod deserialize_enhanced_tx;
     mod test_deserialize_asset_list;
 }
 
